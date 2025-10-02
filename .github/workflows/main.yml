@@ -34,10 +34,10 @@ jobs:
          -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
          -Dsonar.organization=${{ secrets.SONAR_ORG }} \
          -Dsonar.projectKey=${{ secrets.SONAR_PROJ }} \
-         -Dsonar.sources=src/ \
-         -Dsonar.junit.reportsPath=target/surefire-reports/ \
-         -Dsonar.jacoco.reportsPath=target/jacoco.exec \
-         -Dsonar.java.binaries=target/
+         -Dsonar.sources=src \
+         -Dsonar.java.binaries=target \
+         -Dsonar.junit.reportPaths=target/surefire-reports \
+         -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
 
 
 
